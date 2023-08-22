@@ -18,8 +18,9 @@
     .jumbotron {
       background-color: #96c5b0;
       padding: 3rem;
-      margin-bottom: 0;
+      margin-bottom: 100;
       text-align: center;
+      margin: 1px 1px 100px;
     }
     
     .auction-item {
@@ -92,6 +93,9 @@
     .image-row img {
       width: 100%;
     }
+    .container{
+      margin: 10px 15px 20px;
+    }
   }
 
   </style>
@@ -99,30 +103,40 @@
 <body>
   <!-- Criando a barra de navegação -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="imagens/logo.jpeg" alt="LeiloDiv" width="70" height="70" class="d-inline-block align-top">
-    LeiloDiv
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="telainicial.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="sobre_nos.html">Sobre nós</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contato.html">Contato</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <table>
+      <tr>
+        <td><img src="imagens/logo.jpeg" alt="" width="70" height="70" class="d-inline-block align-text-top"></td>
+        <td><a class="navbar-brand" href="#">LeiloDiv</a></td>
+      </tr>
+    </table>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="telainicial.html" title="Ir para a página inicial">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre_nos.html" title="Ir para a página de sobre nós" >Sobre nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html" title="Ir para a página de contatos">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html" title="Ir para a página de login">Login</a>
+        </li>
+      </ul>
+      <div class="navbar-nav ml-auto justify-content-end">
+        <a class="nav-link" href="login.html">
+          <button class="btn btn-outline-dark btn-rounded ml-3" title="Ir para login">Login</button>
+        </a>
+        <a class="nav-link" href="cadastrar.html">
+          <button class="btn btn-outline-dark btn-rounded" title="Ir para cadastro">Cadastro</button>
+        </a>
+      </div>
+    </div>
+  </nav>
 
   <!-- Conteúdo principal -->
   <div class="jumbotron">
