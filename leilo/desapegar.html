@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Desapegar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Barra de navegação ... -->
+  </nav>
+
+  <div class="container mt-4">
+    <h1>Desapegar</h1>
+    <form>
+      <div class="form-group">
+        <label for="productName">Nome do Produto</label>
+        <input type="text" class="form-control" id="productName" placeholder="Digite o nome do produto" required>
+      </div>
+      <div class="form-group">
+        <label for="startingPrice">Valor Inicial do Leilão</label>
+        <input type="number" class="form-control" id="startingPrice" placeholder="Digite o valor inicial do leilão" required>
+      </div>
+      <div class="form-group">
+        <label for="productImage">Imagem do Produto</label>
+        <input type="file" class="form-control-file" id="productImage" accept="image/*" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar Produto</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const productName = document.querySelector("#productName").value;
+        const startingPrice = document.querySelector("#startingPrice").value;
+        const productImage = document.querySelector("#productImage").files[0];
+
+        const formData = new FormData();
+        formData.append("productName", productName);
+        formData.append("startingPrice", startingPrice);
+        formData.append("productImage", productImage);
+
+        // Exemplo de como fazer uma requisição para o servidor
+        fetch("/api/cadastrar-produto", {
+          method: "POST",
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          alert("Produto cadastrado com sucesso!");
+        })
+        .catch(error => {
+          console.error(error);
+          alert("Ocorreu um erro ao cadastrar o produto.");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
