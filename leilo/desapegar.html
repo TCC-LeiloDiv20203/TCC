@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Desapegar</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href= "css/style.css">
+  <link rel="stylesheet" href= "fonts/font.css">
 </head>
 <body>
+  <!-- Criando a barra de navegação -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Barra de navegação ... -->
+    <table>
+      <tr>
+        <td><img src="imagens/logo.jpeg" alt="" width="70" height="70" class="d-inline-block align-text-top"></td>
+        <td><a class="navbar-brand" href="#">LeiloDiv</a></td>
+      </tr>
+    </table>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="telainicial.html" title="Ir para a página inicial">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre_nos.html" title="Ir para a página de sobre nós" >Sobre nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html" title="Ir para a página de contatos">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html" title="Ir para a página de login">Login</a>
+        </li>
+        <li class="nav-item" id="desapegarNavItem">
+          <a class="nav-link" href="desapegar.html" title="Ir para a página de desapego">Desapegar</a>
+        </li>
+    </ul>
+      <div class="navbar-nav ml-auto justify-content-end">
+        <a class="nav-link" href="login.html">
+          <button class="btn btn-outline-dark btn-rounded ml-3" title="Ir para login">Login</button>
+        </a>
+        <a class="nav-link" href="cadastrar.html">
+          <button class="btn btn-outline-dark btn-rounded" title="Ir para cadastro">Cadastro</button>
+        </a>
+      </div>
+    </div>
   </nav>
+
 
   <div class="container mt-4">
     <h1>Desapegar</h1>
